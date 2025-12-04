@@ -27,92 +27,52 @@ public class Model implements IModel {
     }
 
     @Override
-    public String getExhaust(){
-        String resourcePath = "/exhaust.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
-        if (inputStream == null) {
-            throw new IllegalArgumentException("File not found: " + resourcePath);
-        }
-        try {
-            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public String getExhaust() {
+        return "";
     }
 
     @Override
-    public String getCarNeon(){
-        String resourcePath = "/neon.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
-        if (inputStream == null) {
-            throw new IllegalArgumentException("File not found: " + resourcePath);
-        }
-        try {
-            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public String getCarNeon() {
+        return "";
     }
 
     @Override
-    public String getCarRims(){
-        String resourcePath = "/rims.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
-        if (inputStream == null) {
-            throw new IllegalArgumentException("File not found: " + resourcePath);
-        }
-        try {
-            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public String getCarRims() {
+        return "";
     }
 
     @Override
-    public String getCarSpoiler(){
-        String resourcePath = "/spoiler.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
-        if (inputStream == null) {
-            throw new IllegalArgumentException("File not found: " + resourcePath);
-        }
-        try {
-            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public String getCarSpoiler() {
+        return "";
     }
 
     //Getter des messages des réglages mécaniques
     //Spoiler
     @Override
-    public String getMessageEsthetique(){return "aucun effet mécanique.";}
+    public String getMessageEsthetique(){return "";}
     @Override
-    public String getMessageAerodynamique(){return "stabilité accrue.";}
+    public String getMessageAerodynamique(){return "";}
     @Override
-    public String getMessageExagere(){return "vitesse max réduite, effet visuel accentué.";}
+    public String getMessageExagere(){return "";}
     //Neons
     @Override
-    public String getMessageSobre(){return "lumière fixe.";}
+    public String getMessageSobre(){return "";}
     @Override
-    public String getMessageDisco(){return "clignotement simulé.";}
+    public String getMessageDisco(){return "";}
     @Override
-    public String getMessageAleatoire(){return "affichage imprévisible.";}
+    public String getMessageAleatoire(){return "";}
     //Jantes
     @Override
-    public String getMessagePerformance(){return "accélération améliorée.";}
+    public String getMessagePerformance(){return "";}
     @Override
-    public String getMessageLowCost(){return "aucun effet.";}
+    public String getMessageLowCost(){return "";}
     @Override
-    public String getMessageShowOff(){return "bruit distinctif.";}
+    public String getMessageShowOff(){return "";}
     //Exhaust
     @Override
-    public String getMessageDiscret(){return "bruit discret.";}
+    public String getMessageDiscret(){return "";}
     @Override
-    public String getMessageSport(){return "bruit puissant.";}
+    public String getMessageSport(){return "";}
     @Override
-    public String getMessageDrag(){return "bruit extrême.";}
+    public String getMessageDrag(){return "";}
 }

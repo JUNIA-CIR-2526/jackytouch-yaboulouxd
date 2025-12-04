@@ -18,7 +18,11 @@ public class Main {
         IController controller = new Controller();
         controller.setModel(model);
         IView view = new View();
+        View cars = new View();
         controller.setView(view);
         controller.proceed();
+
+        System.out.println(cars);
     }
+
 }
