@@ -36,30 +36,30 @@ public class Model implements IModel {
     //Getter des messages des réglages mécaniques
     //Spoiler
     @Override
-    public String getMessageEsthetique(){return "aucun effet mécanique.";};
+    public String getMessageEsthetique(){return "aucun effet mécanique.";}
     @Override
-    public String getMessageAerodynamique(){return "stabilité accrue.";};
+    public String getMessageAerodynamique(){return "stabilité accrue.";}
     @Override
-    public String getMessageExagere(){return "vitesse max réduite, effet visuel accentué.";};
+    public String getMessageExagere(){return "vitesse max réduite, effet visuel accentué.";}
     //Neons
     @Override
-    public String getMessageSobre(){return "lumière fixe.";};
+    public String getMessageSobre(){return "lumière fixe.";}
     @Override
-    public String getMessageDisco(){return "clignotement simulé.";};
+    public String getMessageDisco(){return "clignotement simulé.";}
     @Override
-    public String getMessageAleatoire(){return "affichage imprévisible.";};
+    public String getMessageAleatoire(){return "affichage imprévisible.";}
     //Jantes
     @Override
-    public String getMessagePerformance(){return "accélération améliorée.";};
+    public String getMessagePerformance(){return "accélération améliorée.";}
     @Override
-    public String getMessageLowCost(){return "aucun effet.";};
+    public String getMessageLowCost(){return "aucun effet.";}
     @Override
-    public String getMessageShowOff(){return "bruit distinctif.";};
+    public String getMessageShowOff(){return "bruit distinctif.";}
     //Exhaust
     @Override
-    public String getMessageDiscret(){return "bruit discret.";};
+    public String getMessageDiscret(){return "bruit discret.";}
     @Override
-    public String getMessageSport(){return "bruit puissant.";};
+    public String getMessageSport(){return "bruit puissant.";}
     @Override
-    public String getMessageDrag(){return "bruit extrême.";};
+    public String getMessageDrag(){return "bruit extrême.";}
 }
