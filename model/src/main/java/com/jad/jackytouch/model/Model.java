@@ -1,36 +1,89 @@
 package com.jad.jackytouch.model;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 import com.jad.jackytouch.common.IModel;
+import com.sun.tools.javac.Main;
 
 public class Model implements IModel {
-    //Getter des fichers txt
+    //Getter des fichiers txt
     @Override
-    public String getCarBase() throws IOException{
-        return Files.readString(Path.of("model/src/main/ressources/car_base.txt"));
+    public String getCarBase() {
+        String resourcePath = "/car_base.txt";
+        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
+        if (inputStream == null) {
+            throw new IllegalArgumentException("File not found: " + resourcePath);
+        }
+        try {
+            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            return content;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public String getExhaust() throws IOException{
-        return Files.readString(Path.of("model/src/main/ressources/exhaust.txt"));
+    public String getExhaust(){
+        String resourcePath = "/exhaust.txt";
+        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
+        if (inputStream == null) {
+            throw new IllegalArgumentException("File not found: " + resourcePath);
+        }
+        try {
+            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            return content;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public String getCarNeon() throws IOException{
-        return Files.readString(Path.of("model/src/main/ressources/neon.txt"));
+    public String getCarNeon(){
+        String resourcePath = "/neon.txt";
+        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
+        if (inputStream == null) {
+            throw new IllegalArgumentException("File not found: " + resourcePath);
+        }
+        try {
+            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            return content;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public String getCarRims() throws IOException{
-        return Files.readString(Path.of("model/src/main/ressources/rims.txt"));
+    public String getCarRims(){
+        String resourcePath = "/rims.txt";
+        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
+        if (inputStream == null) {
+            throw new IllegalArgumentException("File not found: " + resourcePath);
+        }
+        try {
+            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            return content;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public String getCarSpoiler() throws IOException{
-        return Files.readString(Path.of("model/src/main/ressources/spoiler.txt"));
+    public String getCarSpoiler(){
+        String resourcePath = "/spoiler.txt";
+        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
+        if (inputStream == null) {
+            throw new IllegalArgumentException("File not found: " + resourcePath);
+        }
+        try {
+            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            return content;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     //Getter des messages des réglages mécaniques

@@ -5,10 +5,13 @@ import com.jad.jackytouch.common.IModel;
 import com.jad.jackytouch.common.IView;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Controller implements IController {
     private IView view;
     private IModel model;
+    private List<String> tunings = new ArrayList<>();
 
     @Override
     public void setView(IView view){
@@ -17,7 +20,7 @@ public class Controller implements IController {
 
     @Override
     public void proceed() throws IOException {
-        this.view.displayCarBase(this.model.getCarBase());
+        this.view.displayCar(this.model.getCarBase(), tunings);
     }
 
     @Override

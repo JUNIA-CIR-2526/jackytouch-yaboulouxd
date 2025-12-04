@@ -1,5 +1,8 @@
 package com.jad.jackytouch.common;
 
+import java.util.List;
+
 public interface IView {
-    void displayCarBase(final String carsBase);
+    void displayCar(final String carsBase, final List<String> tunings);
+    void displaySetting(final String setting);
 }

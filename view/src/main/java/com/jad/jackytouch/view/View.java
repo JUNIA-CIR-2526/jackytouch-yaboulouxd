@@ -2,11 +2,24 @@ package com.jad.jackytouch.view;
 
 import com.jad.jackytouch.common.IView;
 
+import java.util.List;
+
 public class View implements IView {
 
     @Override
-    public void displayCarBase(final String carsBase){
-        System.out.println(carsBase);
+    public void displayCar(final String carsBase, final List<String> tunings) {
+        StringBuilder car = new StringBuilder(carsBase);
+        for (String tuning : tunings){
+            for (int i = 0; i<tuning.length(); i++){
+                if (tuning.charAt(i)!='.') {
+                    car.setCharAt(i, tuning.charAt(i));
+                }
+            }
+        }
+        System.out.println(car);
     }
+
+    @Override
+    public void displaySetting(final String setting){System.out.println(setting);}
 
 }
