@@ -3,6 +3,8 @@ package com.jad.jackytouch.model;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import com.jad.jackytouch.common.IModel;
 import com.sun.tools.javac.Main;
@@ -25,121 +27,52 @@ public class Model implements IModel {
     }
 
     @Override
-    public String getExhaust(){
-        String resourcePath = "/exhaust.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
-        if (inputStream == null) {
-            throw new IllegalArgumentException("File not found: " + resourcePath);
-        }
-        try {
-            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public String getExhaust() {
+        return "";
     }
 
     @Override
-    public String getCarNeon(){
-        String resourcePath = "/neon.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
-        if (inputStream == null) {
-            throw new IllegalArgumentException("File not found: " + resourcePath);
-        }
-        try {
-            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public String getCarNeon() {
+        return "";
     }
 
     @Override
-    public String getCarRims(){
-        String resourcePath = "/rims.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
-        if (inputStream == null) {
-            throw new IllegalArgumentException("File not found: " + resourcePath);
-        }
-        try {
-            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public String getCarRims() {
+        return "";
     }
 
     @Override
-    public String getCarSpoiler(){
-        String resourcePath = "/spoiler.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
-        if (inputStream == null) {
-            throw new IllegalArgumentException("File not found: " + resourcePath);
-        }
-        try {
-            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public String getCarSpoiler() {
+        return "";
     }
 
-    //Getter des noms des réglages mécaniques
+    //Getter des messages des réglages mécaniques
     //Spoiler
     @Override
-    public String getNameEsthetique(){return "Esthétique";}
+    public String getMessageEsthetique(){return "";}
     @Override
-    public String getNameAerodynamique(){return "Aérodynamique";}
+    public String getMessageAerodynamique(){return "";}
     @Override
-    public String getNameExagere(){return "Exagéré";}
+    public String getMessageExagere(){return "";}
     //Neons
     @Override
-    public String getNameSobre(){return "Sobre";}
+    public String getMessageSobre(){return "";}
     @Override
-    public String getNameDisco(){return "Disco";}
+    public String getMessageDisco(){return "";}
     @Override
-    public String getNameAleatoire(){return "Aléatoire";}
+    public String getMessageAleatoire(){return "";}
     //Jantes
     @Override
-    public String getNamePerformance(){return "Performance";}
+    public String getMessagePerformance(){return "";}
     @Override
-    public String getNameLowCost(){return "Low-cost";}
+    public String getMessageLowCost(){return "";}
     @Override
-    public String getNameShowOff(){return "Show off";}
+    public String getMessageShowOff(){return "";}
     //Exhaust
     @Override
-    public String getNameDiscret(){return "Silencieux";}
+    public String getMessageDiscret(){return "";}
     @Override
-    public String getNameSport(){return "Sport";}
+    public String getMessageSport(){return "";}
     @Override
-    public String getNameDrag(){return "Drag";}
-
-    //Getter des messages des reglages
-    @Override
-    public String getMessageEsthetique(){return "aucun effet mécanique.";}
-    @Override
-    public String getMessageAerodynamique(){return "stabilité accrue.";}
-    @Override
-    public String getMessageExagere(){return "vitesse max réduite, effet visuel accentué.";}
-    //Neons
-    @Override
-    public String getMessageSobre(){return "lumière fixe.";}
-    @Override
-    public String getMessageDisco(){return "clignotement simulé.";}
-    @Override
-    public String getMessageAleatoire(){return "affichage imprévisible.";}
-    //Jantes
-    @Override
-    public String getMessagePerformance(){return "accélération améliorée.";}
-    @Override
-    public String getMessageLowCost(){return "aucun effet.";}
-    @Override
-    public String getMessageShowOff(){return "bruit distinctif.";}
-    //Exhaust
-    @Override
-    public String getMessageDiscret(){return "bruit discret.";}
-    @Override
-    public String getMessageSport(){return "bruit puissant.";}
-    @Override
-    public String getMessageDrag(){return "bruit extrême.";}
+    public String getMessageDrag(){return "";}
 }
