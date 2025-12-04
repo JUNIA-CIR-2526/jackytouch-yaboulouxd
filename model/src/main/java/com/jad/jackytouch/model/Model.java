@@ -3,7 +3,6 @@ package com.jad.jackytouch.model;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import com.jad.jackytouch.common.IModel;
 
