@@ -10,7 +10,7 @@ public class View implements IView {
     public void displayCar(final String carsBase, final List<String> tunings) {
         StringBuilder car = new StringBuilder(carsBase);
         for (String tuning : tunings){
-            for (int i = 0; i<tuning.length(); i++){
+            for (int i = 0; i<tuning.length()-2; i++){
                 if (tuning.charAt(i)!='.') {
                     car.setCharAt(i, tuning.charAt(i));
                 }
@@ -20,6 +20,9 @@ public class View implements IView {
     }
 
     @Override
-    public void displaySetting(final String setting){System.out.println(setting);}
+    public void displaySettingMessage(final String setting){System.out.println("> "+ setting);}
+
+    @Override
+    public void displaySettingName(final String setting){System.out.println("| " + setting);}
 
 }
