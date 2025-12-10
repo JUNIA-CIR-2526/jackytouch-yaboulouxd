@@ -1,12 +1,14 @@
-package com.jad.jackytouch.model;
+package com.jad.jackytouch.model.decorator;
+
+import com.jad.jackytouch.model.Model;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public class Exhaust3 extends AbstractDecorator {
+public class Exhaust extends Model{
     @Override
-    public String getTuning(){
+    public String getExhaust(){
         String resourcePath = "/exhaust.txt";
         InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
         if (inputStream == null) {
@@ -19,6 +21,11 @@ public class Exhaust3 extends AbstractDecorator {
             throw new RuntimeException(e);
         }
     }
+
     @Override
-    public String getDescription(){return "bruit extrême.";}
+    public String getMessageDiscret(){return "bruit discret.";}
+    @Override
+    public String getMessageSport(){return "bruit puissant.";}
+    @Override
+    public String getMessageDrag(){return "bruit extrême.";}
 }
