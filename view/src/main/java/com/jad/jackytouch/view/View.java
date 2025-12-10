@@ -7,7 +7,7 @@ import java.util.List;
 public class View implements IView {
 
     @Override
-    public void displayCar(final String carsBase, final List<String> tunings) {
+    public void displayCar(final String carsBase) {
         StringBuilder car = new StringBuilder(carsBase);
         for (String tuning : tunings){
             for (int i = 0; i<tuning.length(); i++){
