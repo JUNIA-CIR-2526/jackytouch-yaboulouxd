@@ -18,8 +18,8 @@ public class Main {
         controller.setModel(model);
         IView view = new View();
         controller.setView(view);
+        IBehavior cars = new Model();
         controller.proceed();
 
     }
-
 }
