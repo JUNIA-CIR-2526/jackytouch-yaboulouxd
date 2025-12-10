@@ -20,6 +20,9 @@ public class View implements IView {
     }
 
     @Override
-    public void displaySetting(final String setting){System.out.println(setting);}
+    public void displaySettingMessage(final String setting){System.out.println("> "+ setting);}
+
+    @Override
+    public void displaySettingName(final String setting){System.out.println("| " + setting);}
 
 }

@@ -4,5 +4,6 @@ import java.util.List;
 
 public interface IView {
     void displayCar(final String carsBase, final List<String> tunings);
-    void displaySetting(final String setting);
+    void displaySettingName(final String setting);
+    void displaySettingMessage(final String setting);
 }

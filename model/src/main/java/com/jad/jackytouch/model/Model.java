@@ -3,8 +3,6 @@ package com.jad.jackytouch.model;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 import com.jad.jackytouch.common.IModel;
 import com.sun.tools.javac.Main;
@@ -86,8 +84,37 @@ public class Model implements IModel {
         }
     }
 
-    //Getter des messages des réglages mécaniques
+    //Getter des noms des réglages mécaniques
     //Spoiler
+    @Override
+    public String getNameEsthetique(){return "Esthétique";}
+    @Override
+    public String getNameAerodynamique(){return "Aérodynamique";}
+    @Override
+    public String getNameExagere(){return "Exagéré";}
+    //Neons
+    @Override
+    public String getNameSobre(){return "Sobre";}
+    @Override
+    public String getNameDisco(){return "Disco";}
+    @Override
+    public String getNameAleatoire(){return "Aléatoire";}
+    //Jantes
+    @Override
+    public String getNamePerformance(){return "Performance";}
+    @Override
+    public String getNameLowCost(){return "Low-cost";}
+    @Override
+    public String getNameShowOff(){return "Show off";}
+    //Exhaust
+    @Override
+    public String getNameDiscret(){return "Silencieux";}
+    @Override
+    public String getNameSport(){return "Sport";}
+    @Override
+    public String getNameDrag(){return "Drag";}
+
+    //Getter des messages des reglages
     @Override
     public String getMessageEsthetique(){return "aucun effet mécanique.";}
     @Override

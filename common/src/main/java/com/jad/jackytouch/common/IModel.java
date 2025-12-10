@@ -9,6 +9,19 @@ public interface IModel {
     String getCarRims();
     String getCarSpoiler();
 
+    public String getNameEsthetique();
+    public String getNameAerodynamique();
+    public String getNameExagere();
+    public String getNameSobre();
+    public String getNameDisco();
+    public String getNameAleatoire();
+    public String getNamePerformance();
+    public String getNameLowCost();
+    public String getNameShowOff();
+    public String getNameDiscret();
+    public String getNameSport();
+    public String getNameDrag();
+
     public String getMessageEsthetique();
     public String getMessageAerodynamique();
     public String getMessageExagere();
