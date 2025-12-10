@@ -5,13 +5,8 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 import com.jad.jackytouch.common.IModel;
-import com.jad.jackytouch.controller.AbstractCars;
 
-public class Car extends AbstractCars implements IModel {
-    public Car() {
-        super("", "", "");
-    }
-
+public class Car implements IModel {
     @Override
     public String getCarBase() {
         String resourcePath = "/car_base.txt";

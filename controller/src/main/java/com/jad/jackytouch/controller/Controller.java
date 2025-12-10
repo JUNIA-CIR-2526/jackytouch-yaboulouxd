@@ -22,7 +22,7 @@ public class Controller implements IController {
     public void proceed() {
         this.view.displayCar(this.model.getCarBase(), tunings);
         for(String setting : settings){
-            this.view.displaySetting(setting);
+            this.view.displaySettingMessage(setting);
         }
     }
 
