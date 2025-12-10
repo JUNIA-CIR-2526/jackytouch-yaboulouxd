@@ -1,15 +1,13 @@
-package com.jad.jackytouch.model.decorator;
-
-import com.jad.jackytouch.model.Model;
+package com.jad.jackytouch.model;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public class Jantes extends Model {
+public class Neons3 extends AbstractDecorator {
     @Override
-    public String getCarRims(){
-        String resourcePath = "/rims.txt";
+    public String getTuning(){
+        String resourcePath = "/neon.txt";
         InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
         if (inputStream == null) {
             throw new IllegalArgumentException("File not found: " + resourcePath);
@@ -21,11 +19,6 @@ public class Jantes extends Model {
             throw new RuntimeException(e);
         }
     }
-
     @Override
-    public String getMessagePerformance(){return "accélération améliorée.";}
-    @Override
-    public String getMessageLowCost(){return "aucun effet.";}
-    @Override
-    public String getMessageShowOff(){return "bruit distinctif.";}
+    public String getDescription(){return "affichage imprévisible.";}
 }
