@@ -4,18 +4,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-import com.jad.jackytouch.common.IModel;
-import com.jad.jackytouch.controller.AbstractCars;
-
-public class Model extends AbstractCars implements IModel {
-    public Model() {
-        super("", "", "");
-    }
-
-    //Getter des fichiers txt
+public class Neons2 extends AbstractDecorator {
     @Override
-    public String getCarBase() {
-        String resourcePath = "/car_base.txt";
+    public String getTuning(){
+        String resourcePath = "/neon.txt";
         InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
         if (inputStream == null) {
             throw new IllegalArgumentException("File not found: " + resourcePath);
@@ -27,4 +19,7 @@ public class Model extends AbstractCars implements IModel {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public String getDescription(){return "clignotement simulé.";}
 }

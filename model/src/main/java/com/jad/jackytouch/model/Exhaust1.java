@@ -1,15 +1,20 @@
-package com.jad.jackytouch.model.decorator;
+package com.jad.jackytouch.model;
 
-import com.jad.jackytouch.model.Model;
+import com.jad.jackytouch.common.IBehavior;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public class Neons extends Model {
+public class Exhaust1 implements IBehavior {
     @Override
-    public String getCarNeon(){
-        String resourcePath = "/neon.txt";
+    public String getCarBase() {
+        return "";
+    }
+
+    @Override
+    public String getTuning(){
+        String resourcePath = "/exhaust.txt";
         InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
         if (inputStream == null) {
             throw new IllegalArgumentException("File not found: " + resourcePath);
@@ -23,9 +28,5 @@ public class Neons extends Model {
     }
 
     @Override
-    public String getMessageSobre(){return "lumière fixe.";}
-    @Override
-    public String getMessageDisco(){return "clignotement simulé.";}
-    @Override
-    public String getMessageAleatoire(){return "affichage imprévisible.";}
+    public String getDescription(){return "bruit discret.";}
 }
