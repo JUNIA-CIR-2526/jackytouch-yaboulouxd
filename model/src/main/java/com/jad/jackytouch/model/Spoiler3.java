@@ -8,7 +8,7 @@ public class Spoiler3 extends AbstractDecorator {
     @Override
     public String getTuning(){
         String resourcePath = "/spoiler.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
+        InputStream inputStream = Car.class.getResourceAsStream(resourcePath);
         if (inputStream == null) {
             throw new IllegalArgumentException("File not found: " + resourcePath);
         }
@@ -21,5 +21,5 @@ public class Spoiler3 extends AbstractDecorator {
     }
 
     @Override
-    public String getMessageDiscret(){return "vitesse max réduite, effet visuel accentué.";}
+    public String getDescription(){return "vitesse max réduite, effet visuel accentué.";}
 }

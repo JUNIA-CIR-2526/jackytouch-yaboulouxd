@@ -8,7 +8,7 @@ public class Neons1 extends AbstractDecorator {
     @Override
     public String getTuning(){
         String resourcePath = "/neon.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
+        InputStream inputStream = Car.class.getResourceAsStream(resourcePath);
         if (inputStream == null) {
             throw new IllegalArgumentException("File not found: " + resourcePath);
         }

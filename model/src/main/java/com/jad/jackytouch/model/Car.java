@@ -7,16 +7,15 @@ import java.nio.charset.StandardCharsets;
 import com.jad.jackytouch.common.IModel;
 import com.jad.jackytouch.controller.AbstractCars;
 
-public class Model extends AbstractCars implements IModel {
-    public Model() {
+public class Car extends AbstractCars implements IModel {
+    public Car() {
         super("", "", "");
     }
 
-    //Getter des fichiers txt
     @Override
     public String getCarBase() {
         String resourcePath = "/car_base.txt";
-        InputStream inputStream = Model.class.getResourceAsStream(resourcePath);
+        InputStream inputStream = Car.class.getResourceAsStream(resourcePath);
         if (inputStream == null) {
             throw new IllegalArgumentException("File not found: " + resourcePath);
         }
