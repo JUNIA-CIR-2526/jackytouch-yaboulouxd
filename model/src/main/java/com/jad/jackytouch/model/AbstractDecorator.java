@@ -4,11 +4,6 @@ import com.jad.jackytouch.common.IBehavior;
 
 abstract public class AbstractDecorator implements IBehavior {
     @Override
-    public String getCarBase(){
-        return this.getCarBase();
-    }
-
-    @Override
     public String getTuning(){
         return this.getTuning();
     }
