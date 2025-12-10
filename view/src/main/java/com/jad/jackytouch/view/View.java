@@ -7,10 +7,10 @@ import java.util.List;
 public class View implements IView {
 
     @Override
-    public void displayCar(final String carsBase) {
+    public void displayCar(final String carsBase, final List<String> tunings) {
         StringBuilder car = new StringBuilder(carsBase);
         for (String tuning : tunings){
-            for (int i = 0; i<tuning.length(); i++){
+            for (int i = 0; i<tuning.length()-2; i++){
                 if (tuning.charAt(i)!='.') {
                     car.setCharAt(i, tuning.charAt(i));
                 }

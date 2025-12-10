@@ -10,8 +10,6 @@ import java.util.List;
 public class Controller implements IController {
     private IView view;
     private IModel model;
-    private List<String> tunings = new ArrayList<>();
-    private List<String> settings = new ArrayList<>();
 
     @Override
     public void setView(IView view){
@@ -20,8 +18,8 @@ public class Controller implements IController {
 
     @Override
     public void proceed() {
-        this.view.displayCar(this.model.getCarBase(), tunings);
-        for(String setting : settings){
+        this.view.displayCar(this.model.getCarBase(), this.model.getTunings());
+        for(String setting : this.model.getDescs()){
             this.view.displaySettingMessage(setting);
         }
     }

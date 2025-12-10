@@ -15,9 +15,11 @@ public class Main {
         IController controller = new Controller();
         controller.setModel(model);
         IView view = new View();
-        View cars = new View();
         controller.setView(view);
+        model.addTuning(1);
+        model.addTuning(4);
+        model.addTuning(7);
+        model.addTuning(10);
         controller.proceed();
     }
-
 }
