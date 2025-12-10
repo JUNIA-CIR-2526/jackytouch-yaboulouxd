@@ -9,9 +9,10 @@ import com.jad.jackytouch.controller.AbstractCars;
 
 public class Model extends AbstractCars implements IModel {
     public Model() {
-        super("", "");
+        super("", "", "");
     }
 
+    //Getter des fichiers txt
     @Override
     public String getCarBase() {
         String resourcePath = "/car_base.txt";
@@ -26,5 +27,4 @@ public class Model extends AbstractCars implements IModel {
             throw new RuntimeException(e);
         }
     }
-
 }

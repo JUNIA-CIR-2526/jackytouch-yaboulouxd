@@ -6,7 +6,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public class Exhaust1 extends AbstractDecorator {
+public class Exhaust1 implements IBehavior {
+    @Override
+    public String getCarBase() {
+        return "";
+    }
+
     @Override
     public String getTuning(){
         String resourcePath = "/exhaust.txt";

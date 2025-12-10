@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 public class Exhaust2 extends AbstractDecorator {
+
     @Override
     public String getTuning(){
         String resourcePath = "/exhaust.txt";

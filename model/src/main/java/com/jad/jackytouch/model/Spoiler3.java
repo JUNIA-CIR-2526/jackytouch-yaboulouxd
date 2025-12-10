@@ -21,5 +21,5 @@ public class Spoiler3 extends AbstractDecorator {
     }
 
     @Override
-    public String getDescription(){return "vitesse max réduite, effet visuel accentué.";}
+    public String getMessageDiscret(){return "vitesse max réduite, effet visuel accentué.";}
 }
